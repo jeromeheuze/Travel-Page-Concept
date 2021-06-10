@@ -1,0 +1,25 @@
+@import url('reset.css');
+
+body {
+    background: #3b3a4d;
+    color: #fff;
+}
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /** Unsplash photo **/
+    background: url("../img/chris-karidis-nnzkZNYWHaU-unsplash.jpg") center center no-repeat;
+    background-size: cover;
+}
+.container {
+    width: 80vw;
+    height: 80vh;
+    overflow: auto;
+    background: #fff;
+    /** Box shadow **/
+    box-shadow: 1px 0px 21px 3px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 1px 0px 21px 3px rgba(0,0,0,0.51);
+    -moz-box-shadow: 1px 0px 21px 3px rgba(0,0,0,0.51);
+}
