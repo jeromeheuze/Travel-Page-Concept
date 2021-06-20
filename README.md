@@ -6,3 +6,6 @@ https://www.webdevmastery.com/post/website-development-travel-page-concept-part-
 
 ##Website development - Travel Page Concept - Part 2
 https://www.webdevmastery.com/post/website-development-travel-page-concept-part-2
+
+##Website development - Travel Page Concept - Part 3
+https://www.webdevmastery.com/post/website-development-travel-page-concept-part-3

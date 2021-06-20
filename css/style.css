@@ -25,6 +25,7 @@ main {
     box-shadow: 1px 0px 21px 3px rgba(0,0,0,0.51);
     -webkit-box-shadow: 1px 0px 21px 3px rgba(0,0,0,0.51);
     -moz-box-shadow: 1px 0px 21px 3px rgba(0,0,0,0.51);
+    background: rgba(0, 0, 0, 0.75);
 }
 .container .is-row:first-child {
     flex-grow: 1;
@@ -36,20 +37,17 @@ main {
     flex-grow: 1;
 }
 .container .is-row {
-    color: #000;
     justify-content: center;
     align-content: center;
 }
 .sub-container {
     display: flex;
-    height: 100%;
+    align-items: baseline;
 }
 .sub-container div {
     flex-grow: 1;
     justify-content: center;
     align-content: center;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid #fff;
 }
 .sub-container div.hero {
     flex-grow: 5;
@@ -60,4 +58,108 @@ main {
 }
 .sub-container div.social {
     justify-content: flex-start;
+    padding: 1rem;
+}
+.sub-container div.social ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.sub-container div.social ul li {
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+.sub-container div.social ul li:first-child {
+    margin-left: 0;
+}
+
+header .sub-container {
+    margin: 3rem 3rem 0 3rem;
+    border-bottom: 1px solid #fff;
+}
+header .logo span {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+header .logo span:nth-child(2) {
+    letter-spacing: -1px;
+}
+header .menu nav ul {
+    list-style-type: none;
+    display: flex;
+}
+header .menu nav ul li {
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 0.8rem;
+    border-bottom: 2px solid transparent;
+}
+header .menu nav ul li:hover {
+    border-bottom: 2px solid #fff;
+}
+header .menu nav ul li a:link, header .menu nav ul li a:visited {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 3rem;
+}
+header .menu nav ul li a:hover, header .menu nav ul li a:visited {
+
+}
+header .user {
+    font-size: 0.8rem;
+    padding-left: 50px;
+    font-family: sans-serif;
+}
+header .user img {
+    vertical-align: middle;
+    width: 35px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    margin-right: 10px;
+}
+header .mobile {
+    width: 40px;
+    display:flex;
+    justify-content: flex-end;
+}
+header .mobile .menu {
+    margin-left: 20px;
+}
+section.banner .sub-container {
+    padding: 3rem 3rem 0 3rem;
+}
+footer .sub-container {
+    padding: 3rem 3rem 0 3rem;
+    height: 50px;
+}
+
+.icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.icon.facebook {
+    background: url("./../img/facebook.svg") 0 0 no-repeat;
+    background-size: contain;
+}
+.icon.instagram {
+    background: url("./../img/instagram.svg") 0 0 no-repeat;
+    background-size: contain;
+}
+.icon.linkedin {
+    background: url("./../img/linkedin.svg") 0 0 no-repeat;
+    background-size: contain;
+}
+.icon.search {
+    background: url("./../img/search-magnifier-interface-symbol.svg") 0 0 no-repeat;
+    background-size: contain;
+}
+.icon.menu {
+    background: url("./../img/menu.svg") 0 0 no-repeat;
+    background-size: contain;
 }
