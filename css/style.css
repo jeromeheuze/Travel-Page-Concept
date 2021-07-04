@@ -1,25 +1,25 @@
 @import url('reset.css');
 
 body {
-    background: #3b3a4d;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    min-width: 100vw;
+    /** Unsplash photo **/
+    background: url(../img/chris-karidis-nnzkZNYWHaU-unsplash.jpg) center center no-repeat #3b3a4d;;
+    background-size: cover;
 }
 main {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /** Unsplash photo **/
-    background: url("../img/chris-karidis-nnzkZNYWHaU-unsplash.jpg") center center no-repeat;
-    background-size: cover;
 }
 .flexcolumn {
     flex-direction: column;
 }
 .container {
-    width: 80vw;
-    height: 80vh;
-    overflow: auto;
     display: flex;
     /** Box shadow **/
     box-shadow: 1px 0px 21px 3px rgba(0,0,0,0.51);
@@ -51,7 +51,7 @@ main {
 }
 .sub-container div.hero {
     flex-grow: 5;
-    margin: 5rem 5rem 0 5rem;
+    margin: 0 5rem 0 5rem;
 }
 .sub-container div.hero-nav {
     flex-grow: 1;
@@ -73,9 +73,10 @@ main {
     margin-left: 0;
 }
 
+/** HEADER Styles **/
 header .sub-container {
     margin: 3rem 3rem 0 3rem;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 header .logo span {
     text-transform: uppercase;
@@ -107,8 +108,8 @@ header .menu nav ul li a:link, header .menu nav ul li a:visited {
     display: block;
     padding-bottom: 3rem;
 }
-header .menu nav ul li a:hover, header .menu nav ul li a:visited {
-
+header .menu nav ul li a:hover, header .menu nav ul li a:active {
+    /** nothing for now **/
 }
 header .user {
     font-size: 0.8rem;
@@ -127,17 +128,90 @@ header .mobile {
     display:flex;
     justify-content: flex-end;
 }
-header .mobile .menu {
+header .mobile .dots {
     margin-left: 20px;
 }
 section.banner .sub-container {
     padding: 3rem 3rem 0 3rem;
 }
+
+/** FOOTER Styles **/
 footer .sub-container {
     padding: 3rem 3rem 0 3rem;
     height: 50px;
 }
 
+/** HERO Styles **/
+section.banner .hero h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 13.5rem;
+    letter-spacing: .8rem;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(rgba(255,255,255,.9),rgba(255,255,255,0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+section.banner .hero h2 {
+    font-family: 'Zen Loop', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+}
+section.banner .stars {
+    display: flex;
+    margin: 1rem;
+}
+section.banner .stars .star {
+    margin: 0 0.5rem;
+}
+section.banner .cta {
+    display: flex;
+    margin: 2rem;
+}
+section.banner .cta a.btn-hero:link, section.banner .cta a.btn-hero:visited {
+    color: #fff;
+    text-transform: uppercase;
+    background: #234972;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+}
+section.banner .cta a.btn-hero:hover, section.banner .cta a.btn-hero:active {
+    background: #111;
+}
+.sub-container .hero-nav {
+    font-family: sans-serif;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 1.2rem;
+}
+.sub-container .hero-nav .item .icon {
+    opacity: 0.5;
+}
+.sub-container .hero-nav > .item:first-child .icon {
+    margin-right: 1rem;
+    order: 0
+}
+.sub-container .hero-nav > .item:last-child .icon {
+    margin-left: 1rem;
+    order: 1
+}
+.sub-container .hero-nav > .item:first-child {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sub-container .hero-nav > .item:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/** ICONS Styles **/
 .icon {
     display: block;
     width: 20px;
@@ -159,7 +233,42 @@ footer .sub-container {
     background: url("./../img/search-magnifier-interface-symbol.svg") 0 0 no-repeat;
     background-size: contain;
 }
-.icon.menu {
+.icon.dots {
     background: url("./../img/menu.svg") 0 0 no-repeat;
     background-size: contain;
+}
+.icon.left {
+    background: url("./../img/next.svg") 0 0 no-repeat;
+    background-size: contain;
+    transform: scaleX(-1);
+}
+.icon.right {
+    background: url("./../img/next.svg") 0 0 no-repeat;
+    background-size: contain;
+}
+.icon.star {
+    background: url("./../img/star.svg") 0 0 no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        height: 100vh;
+        width: 100vw;
+    }
+    header .menu, header .user {
+        display: none;
+    }
+    header .logo, header .mobile {
+        padding-bottom: 2rem;
+    }
+    section.banner .hero h1 {
+        font-size: 5rem;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 414px) {
+    .container {
+        height: 100vh;
+        width: 100vw;
+    }
 }
